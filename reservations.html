@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Pacific Trails Resort :: Reservations</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../project1_singleton/css/pacific.css" rel="stylesheet" type="text/css">
+	<!-- Links to fonts !--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Bungee&family=Chau+Philomene+One:ital@0;1&family=Cherry+Cream+Soda&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1><a href="index.html">Pacific Trails Resort</a></h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="yurts.html">Yurts</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+	</ul>
+  </nav>
+  <div id="wrapper">
+  <div id="reshero">
+  </div>
+  <main id="reserve">
+    <h2>Reservations at Pacific Trails</h2>
+    <h3>Contact Us</h3>
+	<p>Required fields are marked with an asterisk *</p>
+	 <form method="post" action="https://webdevbasics.net/scripts/pacific.php">
+       <label for="myFName">*First Name: </label><input type="text" id="myFName" name="myFName" required>
+       <label for="myLName">*Last Name: </label><input type="text" id="myLName" name="myLName" required>
+       <label for="myEmail">*E-mail: </label><input type="email" id="myEmail" name="myEmail" required>
+       <label for="myPhone">Phone: </label><input type="tel" id="myPhone" name="myPhone">
+       <label for="myDate">Arrival Date: </label><input type="date" id="myDate" name="myDate">
+       <label for="myNights">Nights: </label><input type="number" id="myNights" name="myNights" min="1" max="14">
+       <label for="myComments">*Comments: </label><textarea id="myComments" name="myComments" rows="2" cols="20" required></textarea>
+       <input type="submit" id="mySubmit" value="Submit">
+	  </form>
+  </main>
+  <footer>
+Copyright &copy; 2020 Pacific Trails Resort<br>
+<a href="mailto:caitlyn@singleton.com">caitlyn@singleton.com</a>
+  </footer>
+</div>
+</body>
+</html>

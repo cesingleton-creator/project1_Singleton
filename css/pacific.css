@@ -1,0 +1,194 @@
+ * { box-sizing: border-box; }
+ body { background-color: #e1d8ce;
+       color: #645138;
+	   font-family: Verdana, Arial, sans-serif;
+	   margin: 0;
+}
+#wrapper { background-color: none;
+}
+header { background-color: #558c92;
+         color: #FFFFFF;
+		 font-family: Shrikhand, serif;
+		font-size: 15pt;
+		 padding: 1em;
+}
+header a { text-decoration: none; }
+header a:link       { color: #285260; }
+header a:visited { color: #FFFFFF; }
+header a:hover     { color: #F2D6A1; }
+
+.shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.chau-philomene-one-regular-italic {
+  font-family: "Chau Philomene One", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+h1 {  font-size: 1.5em;
+     text-align: center;
+}
+h2 { color: #285260;
+     font-family: Georgia, serif;
+	text-align: center;
+	font-size: 2em;
+	margin: 10 0;
+	padding: 10 0;
+}
+h3 { font-family: Georgia, serif; }
+
+p { margin: 0;
+	padding: 0;
+
+}
+
+nav {
+     font-size: 1.6em;
+	 text-align: center;
+	 font-family: Chau Philomene One, sans-serif;
+}
+nav a { text-decoration: none; }
+nav a:link       { color: #285260; }
+nav a:visited { color: #344873; }
+nav a:hover     { color: #ab9171; }
+nav ul { display: flex;
+       flex-direction: column;
+	   list-style-type: none; 
+       margin: 15, 0;
+	   padding: 0; 
+}
+nav li { border-bottom: 1px solid #344873;
+      padding: .5em 1em;
+	  width: 100%; 
+}
+main { display: flex;
+	gap: 2em;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+#flow {
+	display: block;
+}
+
+#reserve {
+		flex-direction: column;
+}
+
+
+dt { color: #002171;
+     font-weight: bold;
+}
+.resort { color: #558c92;
+          font-size: 1.5em;
+}
+
+.pul {
+	width: 600px;
+}
+
+ul { margin: 30px 0px 50px 0px;
+
+}
+
+
+#homehero { height: 500px;
+            background-image: url(../images/coast.jpg);
+  			background-repeat: no-repeat;
+            background-size: 200% 100%; 
+			border-radius: 50px;
+			margin-top: 35px;
+ }
+#yurthero { height: 500px;
+            background-image: url(../images/yurt.jpg);
+  			background-repeat: no-repeat;
+            background-size: 200% 100%;
+			border-radius: 50px;
+			margin-top: 35px;
+ }
+#trailhero { height: 500px;
+            background-image: url(../images/trail.jpg);
+  			background-repeat: no-repeat;
+            background-size: 200% 100%;
+			border-radius: 50px;
+			margin-top: 35px;
+}
+#reshero { height: 500px;
+            background-image: url(../images/ocean.jpg);
+  			background-repeat: no-repeat;
+            background-size: 200% 100%; 
+			border-radius: 50px;
+			margin-top: 35px;
+}
+#mobile  { display: inline; }	
+#desktop { display: none; }
+section {  padding-left: .5em;
+		padding-right: .5em;
+}			
+footer {
+       font-size: .70em;
+       font-style: italic;
+	   padding: 1em;
+	   text-align: center;
+}
+table { margin: auto;
+      width: 90%;
+	  border: 1px solid #3399CC; 
+	  border-collapse: collapse; 
+}
+td, th { padding: 5px;
+       border: 1px solid #3399CC;
+}
+td { text-align: center; }
+.text { text-align: left; 
+		color: #7999A7;
+}
+
+
+.weekend { color: #7999A7;}
+
+tr:nth-of-type(even) { background-color: #F5FAFC; }
+form { display: flex;
+      flex-direction: column;
+	  padding-left: 1em;
+	  width: 80%; }
+input, textarea { margin-bottom: .5em; }
+
+@media (min-width: 600px) { 
+		h1 { font-size: 2em;
+            letter-spacing: .25em;		}
+		nav ul { flex-flow: row nowrap; 
+		       justify-content: space-around;
+			   padding-right: 2em; }
+		nav li { border-bottom: none;
+		      width: 12em; }
+		section { padding-left: 2em;
+		        padding-right: 2em; }
+		#flow { display: flex; 
+		        flex-direction: row; }
+		#mobile { display: none; }
+		#desktop { display: inline; }
+		#homehero, #yurthero, #trailhero, #reshero { background-size: 100% 100%; }
+	    #wrapper { background-color: #e1d8ce; }
+	form { width: 60%;
+			display: grid;
+	grid-gap: 1em; gap: 1em; }
+
+                              }
+
+@media (min-width: 1024px) { 
+		body { background-color: #e1d8ce;
+			
+		  }
+		nav ul { padding-left: 10%;
+		       padding-right: 10%; }
+		#wrapper { margin: auto;
+		          width: 70%; }	
+}				  
+
+
+
