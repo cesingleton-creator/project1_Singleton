@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/pacific.css" rel="stylesheet" type="text/css">
+	<script src="scripts/p1script.js" defer></script>
 	<!-- Links to fonts !--><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Bungee&family=Chau+Philomene+One:ital@0;1&family=Cherry+Cream+Soda&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
@@ -26,6 +27,40 @@
   </div>
   <main id="reserve">
     <h2>Reservations at Pacific Trails</h2>
+    <h3>Custom Packages</h3>
+	  
+	 <div class="prices">
+	  <div class="resortImg">
+		<img src="images/resort.jpg" alt="tropical resort" width="600" height="550">
+		</div> <!--image -->
+    <form>
+	<fieldset>
+		<!-- price per night at the resort, with a max of seven days-->
+	<h4 class="nights"> Nights </h4>
+	<h5>$280</h5>
+	<input type="number" min="0" max="7" id="reserveNights" />
+		<!-- price per guest at the resort, with a max of 5-->
+    <h4># of guests</h4>
+	<h5>$150 per person</h5>
+	<input type="number" min="0" max="5" id="guestNum" />
+		<!-- price to rent a kayak for each person (price included in the guests section)-->
+    <h4>Kayak Rentals</h4>
+		<h5>$10</h5>
+		<input type="checkbox" id="kayakRent" />
+		<!-- cost to rent a kayak per hour, with a max of 4 hours -->
+    <h4>Kayak Hours</h4>
+	<h5>$15/hour</h5>
+		<input type="number" min="0" max="4" id="kayakHour" />
+		<!-- option to buy breakfast every morning -->
+    <h4>Breakfast</h4>
+		<h5>$30</h5>
+	<input type="checkbox" id="breakfast" />
+		<h4> Total: </h4>
+		<h4 id="totalPrice">0</h4>
+		</fieldset>
+		</form> <!--Services-->
+		</div> <!-- Prices -->
+  
     <h3>Contact Us</h3>
 	<p>Required fields are marked with an asterisk *</p>
 	 <form method="post" action="https://webdevbasics.net/scripts/pacific.php">
