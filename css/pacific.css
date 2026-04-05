@@ -11,6 +11,7 @@ header { background-color: #558c92;
 		 font-family: Shrikhand, serif;
 		font-size: 15pt;
 		 padding: 1em;
+	  
 }
 header a { text-decoration: none; }
 header a:link       { color: #285260; }
@@ -29,19 +30,49 @@ header a:hover     { color: #F2D6A1; }
   font-style: italic;
 }
 
-h1 {  font-size: 1.5em;
-     text-align: center;
+h1 { 
+	font-size: 1.5em;
+    text-align: center;
+	margin: 0;
+	padding: 0;
 }
-h2 { color: #285260;
-     font-family: Georgia, serif;
+h2 { 
+	color: #285260;
+    font-family: Georgia, serif;
 	text-align: center;
-	font-size: 2em;
-	margin: 10 0;
-	padding: 10 0;
+	font-size: 30px;
+	margin: 35px 0 5px 0;
+	padding: 0;
 }
-h3 { font-family: Georgia, serif; }
+h3 { 
+	font-family: Georgia, serif; 
+	 font-size: 25px;
+	margin: 10;
+	padding: 0;
+	text-align: center;
+}
 
-p { margin: 0;
+
+h4 {
+	margin: 25px 0 0 0;
+	padding: 0px;
+}
+
+.nights {
+	margin: 25px 0 0;
+}
+
+h5 {
+	margin:  0;
+	padding: 0;
+}
+
+h4, h5 {
+	color: #FFFFFF;
+}
+
+
+p { margin: 10px 0 10px 0;
 	padding: 0;
 
 }
@@ -90,6 +121,27 @@ dt { color: #002171;
 .pul {
 	width: 600px;
 }
+
+.prices {
+	display: flex;
+	background-color: #558c92;
+	margin: 0;
+}
+
+.activ {
+	text-align: left;
+}
+
+.luxury {
+	margin: 35px 0 50px 0;
+}
+
+form fieldset {
+   border: none; 
+   background: #558c92;
+   position: relative;
+}
+
 
 ul { margin: 30px 0px 50px 0px;
 
@@ -158,6 +210,16 @@ form { display: flex;
 	  width: 80%; }
 input, textarea { margin-bottom: .5em; }
 
+@media (max-width: 630px) {
+	
+	.prices {
+		display: inline;
+		align-content: center;
+	}
+		
+	
+}
+
 @media (min-width: 600px) { 
 		h1 { font-size: 2em;
             letter-spacing: .25em;		}
@@ -169,7 +231,7 @@ input, textarea { margin-bottom: .5em; }
 		section { padding-left: 2em;
 		        padding-right: 2em; }
 		#flow { display: flex; 
-		        flex-direction: row; }
+		        flex-direction: column; }
 		#mobile { display: none; }
 		#desktop { display: inline; }
 		#homehero, #yurthero, #trailhero, #reshero { background-size: 100% 100%; }
@@ -189,6 +251,3 @@ input, textarea { margin-bottom: .5em; }
 		#wrapper { margin: auto;
 		          width: 70%; }	
 }				  
-
-
-
