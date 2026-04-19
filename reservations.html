@@ -12,67 +12,61 @@
 </head>
 <body>
   <header>
-    <h1><a href="index.html">Pacific Trails Resort</a></h1>
-  </header>
-  <nav>
+	     <h1><a href="index.html">Pacific Trails</a></h1>
+	  <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="yurts.html">Yurts</a></li>
       <li><a href="activities.html">Activities</a></li>
       <li><a href="reservations.html">Reservations</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
 	</ul>
   </nav>
+  </header>
   <div id="wrapper">
   <div id="reshero">
   </div>
   <main id="reserve">
     <h2>Reservations at Pacific Trails</h2>
     <h3>Custom Packages</h3>
-	  
-	 <div class="prices">
-	  <div class="resortImg">
-		<img src="images/resort.jpg" alt="tropical resort" width="600" height="550">
+	<p>Required fields are marked with an asterisk *</p>
+	  <div class="prices">
+	    <div class="resortImg">
+		<img src="images/resort.jpg" alt="tropical resort" width="900" height="550">
 		</div> <!--image -->
-    <form>
-	<fieldset>
-		<!-- price per night at the resort, with a max of seven days-->
-	<h4 class="nights"> Nights </h4>
-	<h5>$280</h5>
-	<input type="number" min="0" max="7" id="reserveNights" />
-		<!-- price per guest at the resort, with a max of 5-->
-    <h4># of guests</h4>
+	 <form method="post" action="https://webdevbasics.net/scripts/pacific.php">
+		 <fieldset>
+	   <h4 for="myFName">*First Name: </h4><input type="text" id="myFName" name="myFName" required>
+       <h4 for="myLName">*Last Name: </h4><input type="text" id="myLName" name="myLName" required>
+       <h4 for="myEmail">*E-mail: </h4><input type="email" id="myEmail" name="myEmail" required>
+       <h4 for="myPhone">Phone: </h4><input type="tel" id="myPhone" name="myPhone">
+       <h4 for="myDate">Arrival Date: </h4><input type="date" id="myDate" name="myDate">
+		<h4 for="myEnding">End Date: </h4><input type="date" id="myEnding" name="myDate">
+			 <!-- price per night at the resort, with a max of 14 days-->
+			 <h4 class="nights"> Nights </h4>
+	         <h5>$280</h5>
+			 <input type="number" id="reserveNights" name="myNights" min="1" max="14">
+			   <h4># of guests</h4>
 	<h5>$150 per person</h5>
 	<input type="number" min="0" max="5" id="guestNum" />
 		<!-- price to rent a kayak for each person (price included in the guests section)-->
-    <h4>Kayak Rentals</h4>
+			   <h4>Kayak Rentals</h4>
 		<h5>$10</h5>
 		<input type="checkbox" id="kayakRent" />
 		<!-- cost to rent a kayak per hour, with a max of 4 hours -->
-    <h4>Kayak Hours</h4>
+			  <h4>Kayak Hours</h4>
 	<h5>$15/hour</h5>
 		<input type="number" min="0" max="4" id="kayakHour" />
 		<!-- option to buy breakfast every morning -->
     <h4>Breakfast</h4>
 		<h5>$30</h5>
 	<input type="checkbox" id="breakfast" />
-		<h4> Total: </h4>
+			 <h4> Total: </h4>
 		<h4 id="totalPrice">0</h4>
-		</fieldset>
-		</form> <!--Services-->
-		</div> <!-- Prices -->
-  
-    <h3>Contact Us</h3>
-	<p>Required fields are marked with an asterisk *</p>
-	 <form method="post" action="https://webdevbasics.net/scripts/pacific.php">
-       <label for="myFName">*First Name: </label><input type="text" id="myFName" name="myFName" required>
-       <label for="myLName">*Last Name: </label><input type="text" id="myLName" name="myLName" required>
-       <label for="myEmail">*E-mail: </label><input type="email" id="myEmail" name="myEmail" required>
-       <label for="myPhone">Phone: </label><input type="tel" id="myPhone" name="myPhone">
-       <label for="myDate">Arrival Date: </label><input type="date" id="myDate" name="myDate">
-       <label for="myNights">Nights: </label><input type="number" id="myNights" name="myNights" min="1" max="14">
-       <label for="myComments">*Comments: </label><textarea id="myComments" name="myComments" rows="2" cols="20" required></textarea>
-       <input type="submit" id="mySubmit" value="Submit">
+			 <input type="submit" id="mySubmit" value="Submit">
+	    </fieldset>
 	  </form>
+		  </div>
   </main>
   <footer>
 Copyright &copy; 2020 Pacific Trails Resort<br>
