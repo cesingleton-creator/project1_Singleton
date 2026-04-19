@@ -1,0 +1,198 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+div#slideshow {
+   position: relative;
+   width: 1350px;
+   height: 230px;
+   margin: 30px 0 0 0;
+}
+
+/* Styles for slideshow title */
+div#slideshow h2#slideTitle {
+   width: 100%;
+   text-align: center;
+   margin: 0 0 40px 0;
+}
+
+/* Styles for the left and right arrows to move through the slideshow */
+div#slideshow div#slidePrev, div#slideshow div#slideNext {
+   position: absolute;
+	top: 165px;
+   width: 5%;
+   height: 30px;
+   color: #65a4ab;
+   text-shadow: 2px 2px 2px black;
+   font-size: 50px;
+   font-weight: bold;
+   line-height: 30px;
+   text-align: center;
+   z-index: 1;
+   background: rgba(0,0, 0, 0.0);
+   cursor: pointer;
+   user-select: none;
+}
+
+/* Hovering styles for the left and right arrows */
+div#slideshow div#slidePrev:hover, div#slideshow div#slideNext:hover {
+   background: rgba(0,0,0,0.5);
+}
+
+/* Horizontal position of the left arrow */
+div#slideshow div#slidePrev {
+   left: 0px;
+}
+
+/* Horizontal position of the right arrow */
+div#slideshow div#slideNext {
+   right: 0px;
+}
+
+/* Styles for the box containing slide images */
+div#slideshow div#slideImages {
+   display: flex;
+   flex-direction: row;     /* Place images within a flexbox on a single row */
+   flex-wrap: nowrap;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;        /* Hide images which overflow the box border */
+}
+
+/* Styles for the box containing the slide counter */
+div#slideshow div#slideCounter {
+   position: absolute;
+   z-index: 1;
+   width: 70px;
+   height: 26px;
+   line-height: 20px;
+   fonts-size: 20px;
+   background-color: rgba(0,0,0,0.5);
+   border-radius: 4px;
+   text-align: center;
+   color: white;
+   top: 60px;
+   left: 0px;
+   font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+   padding: 3px;
+   user-select: none;
+}
+
+/* Styles for the play-pause button */
+div#slideshow div#slidePlay {
+   position: absolute;
+   top: 250px;
+   left: 47.5%;
+   text-align: center;
+   font-size: 2.2em;
+   width: 40px;
+   margin: 0;
+   text-shadow: 3px 3px 20px black;
+   cursor: pointer;
+   user-select: none;
+   filter: grayscale(1);
+}
+
+/* Hovering styles for the play-pause button */
+div#slideshow div#slidePlay:hover {
+   position: absolute;
+   top: 250px;
+   left: 47.5%;
+   text-align: center;
+   font-size: 2.2em;
+   width: 40px;
+   margin: 0;
+   text-shadow: 3px 3px 20px black;
+   cursor: pointer;
+   user-select: none;
+   filter: grayscale(0.6) hue-rotate(120deg);
+}
+
+/* Styles for images within the slideshow box */
+div#slideImages img {
+   display: block;
+   width: 230px;
+   height: auto;
+   margin: 10px;
+   filter: opacity(0.8);
+   cursor: pointer;
+   outline: 2px solid #9C6908;
+   box-shadow: 3px 3px 10px black;  
+   user-select: none;   
+}
+
+/* Hovering styles for images within the slideshow box */
+div#slideImages img:hover {
+   filter: opacity(1);
+}
+
+
+
+/* Styles for zoomed in images */
+
+
+/* Styles for the overlay */
+div#slideOverlay {
+   position: fixed;                        /* Overlay is fixed on screen */
+   z-index: 1;                             /* Overlay sits on top of other content */
+   width: 100%;                            /* Full width */
+   height: 100%;                           /* Full height */
+   top: 0;
+   left: 0;
+   background-color: rgba(104,49,0,0.85);  /* Semitransparent brown background */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* Styles for the figure box within the overlay */
+div#slideOverlay figure {
+   display: block;
+   width: 80%;
+   max-width: 800px;
+}
+
+/* Styles for the image within the overlay */
+div#slideOverlay figure img {
+   display: block;
+   margin: auto;
+   width: 100%;
+   height: auto;
+   box-shadow: 5px 5px 20px black;
+   animation-name: zoom;      /* animate the opening of the figure */
+   animation-duration: 1s;    /* over a 1-second interval */
+}
+
+/* Styles for the caption within the overlay */
+div#slideOverlay figure figcaption {
+   text-align: center;
+   font-size: 1.25em;
+   color: white;
+   margin-top: 10px;
+   animation-name: zoom;      /* animate the opening of the figure */
+   animation-duration: 1s;    /* over a 1-second interval */  
+}
+
+/* Styles for the overlay close button */
+div#slideOverlay div#slideOverlayClose {
+   position: absolute;
+   top: 20px;
+   right: 40px;
+   color: white;
+   font-size: 60px;
+   cursor: pointer;
+   user-select: none;
+}
+
+/* Hovering styles for the modal window close button */
+div#slideOverlay div#slideOverlayClose:hover {
+   color: gray;
+   text-shadow: 3px 3px 0px black;
+}
+
+/* Keyframe animation for the opening of the modal window figure and caption */
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
