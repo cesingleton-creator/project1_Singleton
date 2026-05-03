@@ -9,9 +9,9 @@
 header { background-color: #558c92;
          color: #FFFFFF;
 		 font-family: Shrikhand, serif;
-		font-size: 15pt;
+		 font-size: 17px;
 		 padding: 1em;
-	display: flex;
+	     display: flex;
 	  
 }
 header a { text-decoration: none; }
@@ -19,7 +19,9 @@ header a:link       { color: #285260; }
 header a:visited { color: #FFFFFF; }
 header a:hover     { color: #F2D6A1; }
 
-
+.cart-header {
+	gap: 3em;
+}
 
 .shrikhand-regular {
   font-family: "Shrikhand", serif;
@@ -33,8 +35,29 @@ header a:hover     { color: #F2D6A1; }
   font-style: italic;
 }
 
+button {
+	background-color: #558c92;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	height: 25px;
+	margin-top: 10px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #698d91;
+	color:#B8B8B8; }
+
+
+.checkout {
+	float: right;
+	margin-top: 40px;
+}
+
+
 h1 { 
-	font-size: 1.5em;
     text-align: center;
 	margin: 0;
 	padding: 0;
@@ -44,7 +67,7 @@ h2 {
     font-family: Georgia, serif;
 	text-align: center;
 	font-size: 30px;
-	margin: 35px 0 5px 0;
+	margin: 35px 0;
 	padding: 0;
 }
 h3 { 
@@ -61,6 +84,16 @@ h4 {
 	padding: 0px;
 }
 
+h5 {
+	font-size: 20px;
+}
+
+
+.shopItem h4 {
+	color: #645138;
+}
+
+
 .nights {
 	margin: 25px 0 0;
 }
@@ -68,17 +101,20 @@ h4 {
 h5 {
 	margin:  0;
 	padding: 0;
+	color: #645138;
 }
 
-h4, h5 {
+h4 {
 	color: #FFFFFF;
 }
 
 
 p { margin: 10px 0 10px 0;
 	padding: 0;
+	text-align: center;
 
 }
+
 
 nav {
      font-size: 1.6em;
@@ -92,18 +128,24 @@ nav a:hover     { color: #ab9171; }
 nav ul { display: flex;
        flex-direction: column;
 	   list-style-type: none; 
-       margin: 15, 0;
+       margin: 15px 0 0 -200px;
 	   padding: 0; 
 }
-nav li { border-bottom: 1px solid #344873;
-      padding: .5em 1em;
+nav li {
+      padding: 20px;
 	  width: 100%; 
 }
+
 main { display: flex;
-	gap: 2em;
 	flex-wrap: wrap;
 	align-items: center;
 }
+
+.container1 {
+	display: inline;
+}
+
+
 
 .homeMain {
 	margin: 0 0 0 400px;
@@ -124,6 +166,26 @@ main { display: flex;
 
 dt { color: #002171;
      font-weight: bold;
+}
+
+
+a img {
+	width: 80px;
+	height: 80px;
+}
+
+#cart {
+	float: right;
+}
+
+#product-list {
+	display: flex;
+	
+}
+
+.product-card img {
+	width: 300px;
+	height: 400px;
 }
 
 
@@ -163,37 +225,53 @@ ul { margin: 30px 0px 50px 0px;
 
 }
 
+#homehero {
+	 background-image: url(../images/coast.jpg);
+}
 
-#homehero { height: 700px;
-			width: 1905px;
-            background-image: url(../images/coast.jpg);
+#yurthero {
+	 background-image: url(../images/yurt.jpg);
+}
+
+#trailhero {
+	 background-image: url(../images/trail.jpg);
+}
+
+#reshero {
+	 background-image: url(../images/ocean.jpg);
+}
+
+#palmhero {
+	 background-image: url(../images/palm.jpg);
+}
+
+#storehero {
+	 background-image: url(../images/store.jpg);
+}
+#homehero, #yurthero, #trailhero, #reshero, #palmhero, #storehero { height: 700px;
+			width: 1900px;
   			background-repeat: no-repeat;
             background-size: 200% 100%; 
  }
-#yurthero { height: 700px;
-			width: 1905px;
-            background-image: url(../images/yurt.jpg);
-  			background-repeat: no-repeat;
-            background-size: 200% 100%;
+
+ #shopItems {
+	display: flex;
+	gap: 20px;
+	margin-left: 100px;
  }
-#trailhero { height: 700px;
-			width: 1905px;
-            background-image: url(../images/trail.jpg);
-  			background-repeat: no-repeat;
-            background-size: 200% 100%;
-}
-#reshero { height: 700px;
-			width: 1905px;
-            background-image: url(../images/ocean.jpg);
-  			background-repeat: no-repeat;
-            background-size: 200% 100%; 
+
+.image {
+	cursor: pointer;
 }
 
-#palmhero { height: 700px;
-			width: 1905px;
-            background-image: url(../images/palm.jpg);
-  			background-repeat: no-repeat;
-            background-size: 200% 100%; 
+.image img {
+	width: 300px;
+	height: 400px;
+	transition: .5s linear;
+}
+
+.image:hover img {
+	transform: scale(1.1);
 }
 
 #mobile  { display: inline; }	
@@ -259,6 +337,7 @@ form { display: flex;
 input, textarea { margin-bottom: .5em; }
 
 
+
 @media (max-width: 630px) {
 	
 	.prices {
@@ -299,4 +378,4 @@ input, textarea { margin-bottom: .5em; }
 		       padding-right: 10%; }
 		#wrapper { margin: 0;
 		 }	
-}				  
+}				  		  
