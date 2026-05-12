@@ -1,4 +1,3 @@
-
 function initShippingPage() {
     displayShippingPage();
     const form = document.getElementById('shipping-form');
@@ -50,4 +49,5 @@ function submitShippingForm(event) {
     event.target.reset();
     displayShippingPage();
 }
+
 
